@@ -1,17 +1,17 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
-import Home from "./Pages/Home";
-import NotFound from "./Pages/NotFound";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
 
-const App = () => {
+export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />}></Route>
-      <Route path="/home" element={<Home />}></Route>
-      <Route path="*" element={<NotFound />}></Route>
-    </Routes>
+    <div className="font-inter">
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
+      </Routes>
+    </div>
   );
-};
-
-export default App;
+}
