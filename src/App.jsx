@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useLocation, useRoutes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
-import Home from "./pages/Home";
-import NotFound from "./pages/NotFound";
+import Home from "./Pages/Home";
+import NotFound from "./Pages/NotFound";
 import NftLogin from "./Pages/NftLogin";
 
 export default function App() {
