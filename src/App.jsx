@@ -37,7 +37,7 @@ export default function App() {
     },
     {
       path: "/nft/login",
-      element: <NftLogin theme={theme} />,
+      element: <NftLogin theme={theme} setTheme={setTheme} />,
     },
     {
       path: "*",

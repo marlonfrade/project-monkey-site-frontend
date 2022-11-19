@@ -55,7 +55,7 @@ export default function Faq() {
             <a href="/" className="mb-6 sm:mx-auto">
               <div className="flex items-center justify-center w-12 h-12 rounded-full bg-red-500">
                 <svg
-                  className="w-10 h-10 text-gray-300"
+                  className="w-10 h-10 text-white"
                   stroke="currentColor"
                   viewBox="0 0 52 52"
                 >

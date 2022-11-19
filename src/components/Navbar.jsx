@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { AnimatePresence, motion } from "framer-motion";
 
 import LogoLightMode from "../images/logo-monkey-light-mode.svg";
 import LogoDarkMode from "../images/logo-monkey-dark-mode.svg";
+
+import { IoInvertModeOutline, IoInvertModeSharp } from "react-icons/io5";
 import DiscordIconSvg from "../images/discord-round-color-icon.svg";
+import { IconContext } from "react-icons";
 
 const navigation = [
   { name: "Projetos", href: "#projects" },
@@ -66,24 +70,39 @@ export default function Navbar({ theme, setTheme }) {
               className=" flex items-center mx-4 cursor-pointer"
               onClick={handleThemeSwitch}
             >
-              <svg
-                width="24px"
-                height="24px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8V16Z"
-                  fill={theme === "dark" ? "white" : "black"}
-                />
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM12 4V8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16V20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z"
-                  fill={theme === "dark" ? "white" : "black"}
-                />
-              </svg>
+              <AnimatePresence exitBeforeEnter initial={false}>
+                <motion.div
+                  key={theme}
+                  initial={{ y: -20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: 20, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {theme === "dark" ? (
+                    <IconContext.Provider
+                      value={{
+                        color: "white",
+                        size: "30px",
+                      }}
+                    >
+                      <div>
+                        <IoInvertModeSharp />
+                      </div>
+                    </IconContext.Provider>
+                  ) : (
+                    <IconContext.Provider
+                      value={{
+                        color: "black",
+                        size: "30px",
+                      }}
+                    >
+                      <div>
+                        <IoInvertModeOutline />
+                      </div>
+                    </IconContext.Provider>
+                  )}
+                </motion.div>
+              </AnimatePresence>
             </div>
             <a
               href="https://discord.com/invite/37sy2VcqtJ"
@@ -148,27 +167,42 @@ export default function Navbar({ theme, setTheme }) {
                 </div>
                 <div className="py-6 flex items-center flex-start">
                   <div
-                    className="flex items-center h-8 w-10 cursor-pointer"
+                    className="flex items-center px-4 cursor-pointer"
                     onClick={handleThemeSwitch}
                   >
-                    <svg
-                      width="24px"
-                      height="24px"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8V16Z"
-                        fill={theme === "dark" ? "white" : "black"}
-                      />
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM12 4V8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16V20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z"
-                        fill={theme === "dark" ? "white" : "black"}
-                      />
-                    </svg>
+                    <AnimatePresence exitBeforeEnter initial={false}>
+                      <motion.div
+                        key={theme}
+                        initial={{ y: -20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        exit={{ y: 20, opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        {theme === "dark" ? (
+                          <IconContext.Provider
+                            value={{
+                              color: "white",
+                              size: "30px",
+                            }}
+                          >
+                            <div>
+                              <IoInvertModeSharp />
+                            </div>
+                          </IconContext.Provider>
+                        ) : (
+                          <IconContext.Provider
+                            value={{
+                              color: "black",
+                              size: "30px",
+                            }}
+                          >
+                            <div>
+                              <IoInvertModeOutline />
+                            </div>
+                          </IconContext.Provider>
+                        )}
+                      </motion.div>
+                    </AnimatePresence>
                   </div>
                   <a
                     href="https://discord.com/invite/37sy2VcqtJ"
