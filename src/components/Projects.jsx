@@ -30,90 +30,148 @@ export default function Projects() {
             possui os seguintes projetos:
           </p>
         </div>
-        <div className="grid gap-20 row-gap-5 mb-8 lg:gap-6 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
-          <a href="https://omala.com.br/" aria-label="View Item Omala">
-            <div className="card card-compact w-96 bg-base-100 shadow-xl">
-              <figure>
-                <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-primary">Buy Now</button>
+
+        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+          <div className="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
+            <div className="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-ful">
+              <div className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm">
+                <img
+                  className="object-cover w-full h-56 md:h-64 xl:h-80"
+                  src={ProjectOmalaBg}
+                  alt="project Omala"
+                />
+                <div className="p-5 border border-t-0">
+                  <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
+                    <a
+                      href="/"
+                      className="transition-colors duration-200 text-blue-gray-900 hover:text-deep-purple-accent-700"
+                      aria-label="Category"
+                      title="traveling"
+                    >
+                      Monkey Branch
+                    </a>
+                    <span className="text-gray-600">— 2022</span>
+                  </p>
+                  <a
+                    href="https://omala.com.br/"
+                    aria-label="View Item Omala"
+                    title="Omala"
+                    className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700"
+                  >
+                    Omala
+                  </a>
+                  <p className="mb-2 text-gray-700">
+                    Viaje mais pagando pouco, com Omala. utilize nossa
+                    inteligência e compre passagens aéreas acessíveis.
+                  </p>
+                  <a
+                    href="/"
+                    aria-label=""
+                    className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                  >
+                    Ver Projeto
+                  </a>
+                </div>
+              </div>
+              <div className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm">
+                <img
+                  className="object-cover w-full h-56 md:h-64 xl:h-80"
+                  src={ProjectTakipBg}
+                  alt="Projeto Takip"
+                />
+                <div className="p-5 border border-t-0">
+                  <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
+                    <a
+                      href="/"
+                      className="transition-colors duration-200 text-blue-gray-900 hover:text-deep-purple-accent-700"
+                      aria-label="Category"
+                      title="traveling"
+                    >
+                      Monkey Branch
+                    </a>
+                    <span className="text-gray-600">— 2022</span>
+                  </p>
+                  <a
+                    href="https://omala.com.br/"
+                    aria-label="View Item Omala"
+                    title="Omala"
+                    className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700"
+                  >
+                    Takip
+                  </a>
+                  <p className="mb-2 text-gray-700">
+                    Acompanhe os Despachos e faça Análise de
+                    Viabilidade/Colidência muito mais rápido e fácil. Acesse a
+                    plataforma e ganhe eficiência.
+                  </p>
+                  <a
+                    href="/"
+                    aria-label=""
+                    className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                  >
+                    Ver Projeto
+                  </a>
+                </div>
+              </div>
+              <div className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm">
+                <img
+                  className="object-cover w-50 h-56 md:h-64 xl:h-60"
+                  src={ProjectValidoBg}
+                  alt="Projeto Validô"
+                />
+                <div className="p-5 border border-t-0">
+                  <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
+                    <a
+                      href="/"
+                      className="transition-colors duration-200 text-blue-gray-900 hover:text-deep-purple-accent-700"
+                      aria-label="Category"
+                      title="traveling"
+                    >
+                      Monkey Branch
+                    </a>
+                    <span className="text-gray-600">— 2022</span>
+                  </p>
+                  <a
+                    href="https://valido.dev/"
+                    aria-label="View Item Omala"
+                    title="Omala"
+                    className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700"
+                  >
+                    Validô
+                  </a>
+                  <p className="mb-2 text-gray-700">
+                    Validar acesso nunca foi tão fácil e rápido.Acesse a API,
+                    envie uma requisição e tá pronto.
+                  </p>
+                  <a
+                    href="/"
+                    aria-label=""
+                    className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                  >
+                    Ver Projeto
+                  </a>
                 </div>
               </div>
             </div>
-            <div className="relative bg-blue-300 overflow-hidden transition duration-200 transform rounded shadow-lg dark:shadow-gray-700 hover:-translate-y-2 hover:shadow-2xl">
-              <img
-                className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src={ProjectOmalaBg}
-                alt="project Omala"
-              />
-              <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                <p className="mb-4 text-lg font-bold text-gray-100">Omala</p>
-                <p className="text-sm tracking-wide text-gray-300">
-                  Viaje mais pagando pouco, com Omala. utilize nossa
-                  inteligência e compre passagens aéreas acessíveis.
-                </p>
-              </div>
-            </div>
-          </a>
-          <a
-            href="https://discord.com/invite/r52u8e29u3"
-            aria-label="View Item"
-          >
-            <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg dark:shadow-gray-700 hover:-translate-y-2 hover:shadow-2xl">
-              <img
-                className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src={ProjectTakipBg}
-                alt="Projeto Takip"
-              />
-              <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                <p className="mb-4 text-lg font-bold text-gray-100">Takip</p>
-                <p className="text-sm tracking-wide text-gray-300">
-                  Acompanhe os Despachos e faça Análise de
-                  Viabilidade/Colidência muito mais rápido e fácil. Acesse a
-                  plataforma e ganhe eficiência.
-                </p>
-              </div>
-            </div>
-          </a>
-          <a href="https://valido.dev/" aria-label="View Item">
-            <div className="relative md:h-64 xl:h-80 flex justify-center items-center bg-indigo-300 overflow-hidden transition duration-200 transform rounded shadow-lg  dark:shadow-gray-700 hover:-translate-y-2 hover:shadow-2xl ">
-              <img
-                className="object-cover w-50 h-56 md:h-64 xl:h-60"
-                src={ProjectValidoBg}
-                alt="Projeto Validô"
-              />
-              <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                <p className="mb-4 text-lg font-bold text-gray-100">Validô</p>
-                <p className="text-sm tracking-wide text-gray-300">
-                  Validar acesso nunca foi tão fácil e rápido.Acesse a API,
-                  envie uma requisição e tá pronto.
-                </p>
-              </div>
-            </div>
-          </a>
-          <a href="https://datafleet.io/" aria-label="View Item">
-            <div className="relative md:h-64 xl:h-80 flex justify-center items-center overflow-hidden transition duration-200 transform rounded shadow-lg dark:shadow-gray-700 hover:-translate-y-2 hover:shadow-2xl">
-              <img
-                className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src={ProjectDatafleetBg}
-                alt="Projeto Datafleet"
-              />
-              <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                <p className="mb-4 text-lg font-bold text-gray-100">
-                  Datafleet
-                </p>
-                <p className="text-sm tracking-wide text-gray-300">
-                  Aplicativo desenvolvido para gerir frotas da empresa WPX com
-                  mais controle e confiança.
-                </p>
-              </div>
-            </div>
-          </a>
+          </div>
         </div>
+
+        {/* <a href="https://datafleet.io/" aria-label="View Item">
+          <div className="relative md:h-64 xl:h-80 flex justify-center items-center overflow-hidden transition duration-200 transform rounded shadow-lg dark:shadow-gray-700 hover:-translate-y-2 hover:shadow-2xl">
+            <img
+              className="object-cover w-full h-56 md:h-64 xl:h-80"
+              src={ProjectDatafleetBg}
+              alt="Projeto Datafleet"
+            />
+            <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
+              <p className="mb-4 text-lg font-bold text-gray-100">Datafleet</p>
+              <p className="text-sm tracking-wide text-gray-300">
+                Aplicativo desenvolvido para gerir frotas da empresa WPX com
+                mais controle e confiança.
+              </p>
+            </div>
+          </div>
+        </a> */}
         <div className="text-center">
           <Link
             to="/projects"
