@@ -13,6 +13,7 @@ export default function Projects() {
       id="projects"
       className="container max-w-screen-xl mx-auto isolate px-6 lg:px-8 py-12 lg:py-20"
     >
+      {/* [ADJUSTS] - add projects's name to the card format */}
       <MotionComponent>
         <div className="flex flex-col mb-20 lg:justify-between lg:flex-row md:mb-8">
           <h2 className="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-red-600 via-red-500 to-purple-500 sm:text-4xl sm:leading-none md:mb-6">
@@ -31,6 +32,18 @@ export default function Projects() {
         </div>
         <div className="grid gap-20 row-gap-5 mb-8 lg:gap-6 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
           <a href="https://omala.com.br/" aria-label="View Item Omala">
+            <div className="card card-compact w-96 bg-base-100 shadow-xl">
+              <figure>
+                <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">Shoes!</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div className="card-actions justify-end">
+                  <button className="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
             <div className="relative bg-blue-300 overflow-hidden transition duration-200 transform rounded shadow-lg dark:shadow-gray-700 hover:-translate-y-2 hover:shadow-2xl">
               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80"

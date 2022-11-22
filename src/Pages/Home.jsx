@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import Hero from "../components/Hero";
 import Company from "../components/Company";
 import Projects from "../components/Projects";
-import Faq from "../components/Faq";
+import FaqWeb3 from "../components/FaqWeb3";
 import Statistic from "../components/Statistic";
-import Cta from "../components/Cta";
+import HireUs from "../components/HireUs";
 import Footer from "../components/Footer";
 
 export default function Home({ theme, setTheme }) {
@@ -26,8 +26,8 @@ export default function Home({ theme, setTheme }) {
       <Company />
       <Projects />
       <Statistic />
-      <Faq />
-      <Cta windowWidth={windowWidth} />
+      <FaqWeb3 />
+      <HireUs windowWidth={windowWidth} />
       <Footer theme={theme} />
     </div>
   );

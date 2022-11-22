@@ -43,7 +43,7 @@ const Item = ({ title, children }) => {
   );
 };
 
-export default function Faq() {
+export default function FaqWeb3() {
   return (
     <div
       id="faq"

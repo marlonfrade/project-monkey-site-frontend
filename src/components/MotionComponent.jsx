@@ -18,19 +18,6 @@ const variants = {
   },
 };
 
-//Animation 1
-
-// const MotionComponent = ({ children, delay = 0 }) => (
-//   <motion.div
-//     initial={{ y: 10, opacity: 0 }}
-//     animate={{ y: 0, opacity: 1 }}
-//     transition={{ duration: 0.8, delay }}
-//     className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
-//   >
-//     {children}
-//   </motion.div>
-// );
-
 const MotionComponent = ({ children, delay = 0 }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 

@@ -13,20 +13,21 @@ export default function App() {
   useEffect(() => {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setTheme("dark");
+      localStorage.setItem("user_theme_preference", "dark");
     } else {
       setTheme("light");
+      localStorage.setItem("user_theme_preference", "light");
     }
   }, []);
 
   //verify and apply theme color in the root div
   useEffect(() => {
-    //   invert theme below
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
-      localStorage.setItem("user_color_preference", "dark");
+      localStorage.setItem("user_theme_preference", "dark");
     } else {
       document.documentElement.classList.remove("dark");
-      localStorage.setItem("user_color_preference", "light");
+      localStorage.setItem("user_theme_preference", "light");
     }
   }, [theme]);
 
@@ -37,7 +38,7 @@ export default function App() {
     },
     {
       path: "/nft/login",
-      element: <NftLogin theme={theme} setTheme={setTheme} />,
+      element: <NftLogin />,
     },
     {
       path: "*",

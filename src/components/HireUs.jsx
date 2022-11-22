@@ -5,12 +5,13 @@ import MotionComponent from "./MotionComponent";
 import HeroDesktopBg from "../images/hero-desktop-bg.png";
 import HeroMobileBg from "../images/hero-mobile-bg.png";
 
-export default function Cta({ windowWidth }) {
+export default function HireUs({ windowWidth }) {
   return (
     <div
       id="services"
       className="container max-w-screen-xl mx-auto isolate px-4 py-12 lg:py-20"
     >
+      {/* [ADJUSTS] - implement email send function */}
       <MotionComponent>
         <div className="relative flex flex-col-reverse px-4 py-20 mx-auto lg:block lg:flex-col lg:py-32 xl:py-40 sm:max-w-xl md:max-w-full">
           <div className="z-0 flex justify-center h-full -mx-4 overflow-hidden lg:pt-24 lg:pb-16 lg:pr-8 xl:pr-0 lg:w-1/2 lg:absolute lg:justify-end lg:bottom-0 lg:left-0 lg:items-center">
