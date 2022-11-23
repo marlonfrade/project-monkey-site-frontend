@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Tab } from "@headlessui/react";
 
-import Navbar from "../components/NavHome";
+import Navbar from "../components/Navbar";
 import MotionComponent from "../components/MotionComponent";
 import Footer from "../components/Footer";
 import SvgBgEffect from "../components/SvgBgEffect";
+
+import ProjectOmalaBg from "../images/project-omala.png";
 
 const navigation = [{ name: "Home", href: "/" }];
 
@@ -18,23 +20,47 @@ export default function Projects({ theme, setTheme }) {
     Softwares: [
       {
         id: 1,
-        title: "Does drinking coffee make you smarter?",
-        date: "5h ago",
-        commentCount: 5,
-        shareCount: 2,
+        image: "project-omala",
+        link: "https://omala.com.br/",
+        title: "Projeto Omala",
+        description:
+          "Viaje mais pagando pouco, com Omala. utilize nossa inteligência e compre passagens aéreas acessíveis",
+        launch: "Agosto/2022",
       },
       {
-        id: 2,
-        title: "So you've bought coffee... now what?",
-        date: "2h ago",
-        commentCount: 3,
-        shareCount: 2,
+        id: 1,
+        image: "project-valido",
+        link: "https://valido.dev/",
+        title: "Projeto Validô",
+        description:
+          "Validar acesso nunca foi tão fácil e rápido.Acesse a API, envie uma requisição e tá pronto.",
+        launch: "Agosto/2022",
+      },
+      {
+        id: 1,
+        image: "project-takip",
+        link: "https://discord.com/invite/r52u8e29u3",
+        title: "Projeto Takip",
+        description:
+          "Acompanhe os Despachos e faça Análise de Viabilidade/Colidência muito mais rápido e fácil. Acesse a plataforma e ganhe eficiência.",
+        launch: "Agosto/2022",
+      },
+      {
+        id: 1,
+        image: "project-datafleet",
+        link: "https://omala.com.br/",
+        title: "Projeto Datafleet",
+        description:
+          "Software desenvolvido para gerir frotas da empresa WPX com mais controle e confiança",
+        launch: "Agosto/2022",
       },
     ],
     SitesDisabled: [],
     AppsDisabled: [],
     VRDisabled: [],
   });
+
+  console.log(categories.Softwares.map((el) => el.image));
 
   // Verify if "disabled" is working
   console.log(Object.keys(categories));
@@ -47,7 +73,7 @@ export default function Projects({ theme, setTheme }) {
       <MotionComponent>
         <Navbar theme={theme} setTheme={setTheme} navigation={navigation} />
 
-        <section className="bg-white dark:bg-gray-900 rounded-t-lg mt-7">
+        <section className="bg-transparent rounded-t-lg mt-7">
           <div className="container px-6 py-10 mx-auto">
             <h1 className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">
               Projetos Monkey
@@ -66,11 +92,11 @@ export default function Projects({ theme, setTheme }) {
                       disabled={category.includes("Disabled")}
                       className={({ selected }) =>
                         classNames(
-                          "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700",
+                          "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-red-600",
                           "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2",
                           selected
                             ? "bg-white shadow"
-                            : "text-blue-100 hover:bg-white/[0.12] hover:text-white"
+                            : "text-red-400 hover:bg-white/[0.12] hover:text-white"
                         )
                       }
                     >
@@ -82,171 +108,42 @@ export default function Projects({ theme, setTheme }) {
                   {Object.values(categories).map((projects, idx) => (
                     <Tab.Panel
                       key={idx}
-                      className={classNames(
-                        "rounded-xl bg-white p-3",
-                        "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
-                      )}
+                      className={classNames("bg-transparent p-3")}
                     >
                       <ul>
-                        {projects.map((project) => (
-                          <li
-                            key={project.id}
-                            className="relative rounded-md p-3 hover:bg-gray-100"
-                          >
-                            <h3 className="text-sm font-medium leading-5">
-                              {project.title}
-                            </h3>
+                        <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
+                          {projects.map((project) => (
+                            <div key={project.id} className="lg:flex">
+                              <img
+                                className="object-cover w-full h-56 rounded-lg lg:w-64"
+                                src={"/src/images/" + project.image + ".png"}
+                                alt={project.description}
+                              />
 
-                            <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500">
-                              <li>{project.date}</li>
-                              <li>&middot;</li>
-                              <li>{project.commentCount} comments</li>
-                              <li>&middot;</li>
-                              <li>{project.shareCount} shares</li>
-                            </ul>
+                              <div className="flex flex-col justify-between py-6 lg:mx-6">
+                                <a
+                                  href={project.link}
+                                  className="text-xl font-semibold text-gray-800 hover:underline dark:text-white "
+                                >
+                                  {project.title}
+                                </a>
 
-                            <a
-                              href="#"
-                              className={classNames(
-                                "absolute inset-0 rounded-md",
-                                "ring-blue-400 focus:z-10 focus:outline-none focus:ring-2"
-                              )}
-                            />
-                          </li>
-                        ))}
+                                <p className="text-md text-gray-500 dark:text-gray-300">
+                                  {project.description}
+                                </p>
+
+                                <span className="text-sm text-gray-500 dark:text-gray-300">
+                                  Projeto Lançado em: {project.launch}
+                                </span>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
                       </ul>
                     </Tab.Panel>
                   ))}
                 </Tab.Panels>
               </Tab.Group>
-            </div>
-
-            <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
-              <div className="lg:flex">
-                <img
-                  className="object-cover w-full h-56 rounded-lg lg:w-64"
-                  src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                  alt=""
-                />
-
-                <div className="flex flex-col justify-between py-6 lg:mx-6">
-                  <a
-                    href="#"
-                    className="text-xl font-semibold text-gray-800 hover:underline dark:text-white "
-                  >
-                    How to use sticky note for problem solving
-                  </a>
-
-                  <span className="text-sm text-gray-500 dark:text-gray-300">
-                    On: 20 October 2019
-                  </span>
-                </div>
-              </div>
-
-              <div className="lg:flex">
-                <img
-                  className="object-cover w-full h-56 rounded-lg lg:w-64"
-                  src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                  alt=""
-                />
-
-                <div className="flex flex-col justify-between py-6 lg:mx-6">
-                  <a
-                    href="#"
-                    className="text-xl font-semibold text-gray-800 hover:underline dark:text-white "
-                  >
-                    How to use sticky note for problem solving
-                  </a>
-
-                  <span className="text-sm text-gray-500 dark:text-gray-300">
-                    On: 20 October 2019
-                  </span>
-                </div>
-              </div>
-
-              <div className="lg:flex">
-                <img
-                  className="object-cover w-full h-56 rounded-lg lg:w-64"
-                  src="https://images.unsplash.com/photo-1544654803-b69140b285a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                  alt=""
-                />
-
-                <div className="flex flex-col justify-between py-6 lg:mx-6">
-                  <a
-                    href="#"
-                    className="text-xl font-semibold text-gray-800 hover:underline dark:text-white "
-                  >
-                    Morning routine to boost your mood
-                  </a>
-
-                  <span className="text-sm text-gray-500 dark:text-gray-300">
-                    On: 25 November 2020
-                  </span>
-                </div>
-              </div>
-
-              <div className="lg:flex">
-                <img
-                  className="object-cover w-full h-56 rounded-lg lg:w-64"
-                  src="https://images.unsplash.com/photo-1530099486328-e021101a494a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1547&q=80"
-                  alt=""
-                />
-
-                <div className="flex flex-col justify-between py-6 lg:mx-6">
-                  <a
-                    href="#"
-                    className="text-xl font-semibold text-gray-800 hover:underline dark:text-white "
-                  >
-                    All the features you want to know
-                  </a>
-
-                  <span className="text-sm text-gray-500 dark:text-gray-300">
-                    On: 30 September 2020
-                  </span>
-                </div>
-              </div>
-
-              <div className="lg:flex">
-                <img
-                  className="object-cover w-full h-56 rounded-lg lg:w-64"
-                  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1484&q=80"
-                  alt=""
-                />
-
-                <div className="flex flex-col justify-between py-6 lg:mx-6">
-                  <a
-                    href="#"
-                    className="text-xl font-semibold text-gray-800 hover:underline dark:text-white "
-                  >
-                    Minimal workspace for your inspirations
-                  </a>
-
-                  <span className="text-sm text-gray-500 dark:text-gray-300">
-                    On: 13 October 2019
-                  </span>
-                </div>
-              </div>
-
-              <div className="lg:flex">
-                <img
-                  className="object-cover w-full h-56 rounded-lg lg:w-64"
-                  src="https://images.unsplash.com/photo-1624996379697-f01d168b1a52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                  alt=""
-                />
-
-                <div className="flex flex-col justify-between py-6 lg:mx-6">
-                  <a
-                    href="#"
-                    className="text-xl font-semibold text-gray-800 hover:underline dark:text-white "
-                  >
-                    What do you want to know about Blockchane
-                  </a>
-
-                  <span className="text-sm text-gray-500 dark:text-gray-300">
-                    On: 20 October 2019
-                  </span>
-                </div>
-              </div>
             </div>
           </div>
         </section>

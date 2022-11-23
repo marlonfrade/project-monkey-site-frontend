@@ -8,7 +8,7 @@ import { SiDiscord } from "react-icons/si";
 
 export default function Footer({ theme }) {
   return (
-    <footer className="flex flex-col gap-y-5 items-center justify-between p-6 bg-white dark:bg-gray-900 sm:flex-row">
+    <footer className="flex flex-col gap-y-5 items-center justify-between p-6 bg-transparent sm:flex-row">
       <Link to="/">
         <span className="sr-only">Monkey Branch</span>
         {theme === "dark" ? (
