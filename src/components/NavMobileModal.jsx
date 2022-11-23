@@ -2,6 +2,8 @@ import { Dialog } from "@headlessui/react";
 import { HiX } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
+import SvgBgEffect from "./SvgBgEffect";
+
 import LogoLightMode from "../images/logo-monkey-light-mode.svg";
 import LogoDarkMode from "../images/logo-monkey-dark-mode.svg";
 import DiscordIconSvg from "../images/discord-round-color-icon.svg";
@@ -23,6 +25,7 @@ export default function NavMobileModal({
         focus="true"
         className="fixed inset-0 z-10 overflow-y-auto px-6 py-6 lg:hidden bg-white dark:bg-black"
       >
+        <SvgBgEffect />
         <div className="flex h-9 items-center justify-between">
           <div className="flex">
             <Link to="/" className="-m-1.5 p-1.5">

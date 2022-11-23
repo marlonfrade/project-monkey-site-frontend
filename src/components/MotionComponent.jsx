@@ -36,7 +36,7 @@ const MotionComponent = ({ children, delay = 0 }) => {
         <motion.div
           initial="offscreen"
           whileInView="onscreen"
-          viewport={{ once: true, amount: 0.8 }}
+          viewport={{ once: true, amount: 0.5 }}
           className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl"
         >
           <motion.div variants={variants} className="mx-auto">

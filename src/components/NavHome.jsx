@@ -12,14 +12,7 @@ import LogoLightMode from "../images/logo-monkey-light-mode.svg";
 import LogoDarkMode from "../images/logo-monkey-dark-mode.svg";
 import DiscordIconSvg from "../images/discord-round-color-icon.svg";
 
-const navigation = [
-  { name: "Projetos", href: "#projects" },
-  { name: "Serviços", href: "#services" },
-  { name: "Monkey", href: "#company" },
-  { name: "Web3", href: "#faq" },
-];
-
-export default function Navbar({ theme, setTheme }) {
+export default function NavHome({ theme, setTheme, navigation }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleThemeSwitch = () => {
@@ -29,7 +22,7 @@ export default function Navbar({ theme, setTheme }) {
 
   return (
     <div>
-      <div className="px-6 pt-6 lg:px-8">
+      <div className="px-6 pt-6 py-6 lg:px-8">
         <nav
           className="flex h-9 items-center justify-between"
           aria-label="Navigation"

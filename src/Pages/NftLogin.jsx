@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import MotionComponent from "../components/MotionComponent";
 import LoginModal from "../components/LoginModal";
 
-import NftLoginBg from "../images/nft-login-bg.png";
+import NftLoginBg from "../images/background.png";
 import LogoDarkMode from "../images/logo-monkey-dark-mode.svg";
 import { useState } from "react";
 
@@ -22,8 +22,8 @@ export default function NftLogin() {
             <MotionComponent>
               <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
                 Em breve, uma nova <br className="hidden md:block" />
-                era digital com a{" "}
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-600 via-red-500 to-purple-500">
+                era com a
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-600 via-red-500 to-purple-500 pl-4">
                   NFT Monkey Branch
                 </span>
               </h2>
