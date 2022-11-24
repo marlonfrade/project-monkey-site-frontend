@@ -43,7 +43,11 @@ export default function SvgBgEffect() {
   return (
     <div>
       {/* SVG top left background */}
-      <div className="fixed top-[-10rem] -z-10 overflow-hidden blur-3xl sm:top-[-20rem]">
+      <motion.div
+        className="fixed top-[-10rem] -z-10 overflow-hidden blur-3xl sm:top-[-20rem]"
+        variants={svgVariants1}
+        animate={"visible"}
+      >
         <motion.svg
           className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
           viewBox="0 0 1155 678"
@@ -71,9 +75,13 @@ export default function SvgBgEffect() {
             </linearGradient>
           </defs>
         </motion.svg>
-      </div>
+      </motion.div>
       {/* SVG bottom right background */}
-      <div className="fixed top-[calc(100%-13rem)] -z-10 overflow-hidden blur-3xl sm:top-[calc(100%-40rem)]">
+      <motion.div
+        className="fixed top-[calc(100%-13rem)] -z-10 overflow-hidden blur-3xl sm:top-[calc(100%-40rem)]"
+        variants={svgVariants2}
+        animate={"visible"}
+      >
         <motion.svg
           className="relative left-[calc(50%-3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+0rem)] sm:h-[49.375rem]"
           viewBox="0 0 1155 678"
@@ -101,9 +109,13 @@ export default function SvgBgEffect() {
             </linearGradient>
           </defs>
         </motion.svg>
-      </div>
+      </motion.div>
       {/* SVG bottom left background */}
-      <div className="fixed top-[calc(100%-13rem)] -z-10 overflow-hidden blur-3xl sm:top-[calc(100%-20rem)]">
+      <motion.div
+        className="fixed top-[calc(100%-13rem)] -z-10 overflow-hidden blur-3xl sm:top-[calc(100%-20rem)]"
+        variants={svgVariants3}
+        animate={"visible"}
+      >
         <motion.svg
           className="relative left-[calc(50%-3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%-80rem)] sm:h-[49.375rem]"
           viewBox="0 0 1155 678"
@@ -131,7 +143,7 @@ export default function SvgBgEffect() {
             </linearGradient>
           </defs>
         </motion.svg>
-      </div>
+      </motion.div>
     </div>
   );
 }
