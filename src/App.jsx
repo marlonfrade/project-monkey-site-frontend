@@ -7,17 +7,29 @@ import NftLogin from "./Pages/NftLogin";
 import Projects from "./Pages/Projects";
 import NotFound from "./Pages/NotFound";
 
+import FaviconDark from "./images/logo-monkey-dark-mode.svg";
+import FaviconLight from "./images/logo-monkey-light-mode.svg";
+
 export default function App() {
   const [theme, setTheme] = useState(null);
+
+  let link = document.querySelector("link[rel~='icon']");
+  if (!link) {
+    link = document.createElement("link");
+    link.rel = "icon";
+    document.getElementsByTagName("head")[0].appendChild(link);
+  }
 
   // verify user preferences for theme
   useEffect(() => {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setTheme("dark");
       localStorage.setItem("user_theme_preference", "dark");
+      link.href = FaviconDark;
     } else {
       setTheme("light");
       localStorage.setItem("user_theme_preference", "light");
+      link.href = FaviconLight;
     }
   }, []);
 

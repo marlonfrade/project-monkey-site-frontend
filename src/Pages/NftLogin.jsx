@@ -56,10 +56,15 @@ export default function NftLogin({ theme, setTheme }) {
 
               <div>
                 {theme === "dark" ? (
-                  <img src={LogoDarkMode} alt="logo Monkey Branch dark mode" />
+                  <img
+                    src={LogoDarkMode}
+                    className="w-20 h-20"
+                    alt="logo Monkey Branch dark mode"
+                  />
                 ) : (
                   <img
                     src={LogoLightMode}
+                    className="w-20 h-20"
                     alt="Logo Monkey Branch light mode"
                   />
                 )}

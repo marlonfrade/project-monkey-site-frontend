@@ -22,7 +22,7 @@ export default function NavHome({ theme, setTheme, navigation }) {
 
   return (
     <div>
-      <div className="px-6 pt-6 py-6 lg:px-8">
+      <div className="px-6 pt-12 lg:px-8 py-6">
         <nav
           className="flex h-9 items-center justify-between"
           aria-label="Navigation"
@@ -31,9 +31,17 @@ export default function NavHome({ theme, setTheme, navigation }) {
             <Link to="/">
               <span className="sr-only">Monkey Branch</span>
               {theme === "dark" ? (
-                <img src={LogoDarkMode} alt="logo Monkey Branch dark mode" />
+                <img
+                  src={LogoDarkMode}
+                  className="w-20 h-20"
+                  alt="logo Monkey Branch dark mode"
+                />
               ) : (
-                <img src={LogoLightMode} alt="Logo Monkey Branch light mode" />
+                <img
+                  src={LogoLightMode}
+                  className="w-20 h-20"
+                  alt="Logo Monkey Branch light mode"
+                />
               )}
             </Link>
           </div>

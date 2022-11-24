@@ -13,7 +13,6 @@ export default function Projects() {
       id="projects"
       className="container max-w-screen-xl mx-auto isolate px-6 lg:px-8 py-12 lg:py-20"
     >
-      {/* [ADJUSTS] - add projects's name to the card format */}
       <MotionComponent>
         <div className="flex flex-col mb-20 lg:justify-between lg:flex-row md:mb-8">
           <h2 className="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-red-600 via-red-500 to-purple-500 sm:text-4xl sm:leading-none md:mb-6">
@@ -155,7 +154,7 @@ export default function Projects() {
           <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
             <a href="https://datafleet.io/">
               <img
-                className="rounded-t-lg w-full h-60"
+                className="rounded-t-lg w-full h-70.  sm:h-60"
                 src={ProjectDatafleetBg}
                 alt="Projeto Datafleet"
               />

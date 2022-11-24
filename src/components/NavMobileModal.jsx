@@ -3,6 +3,7 @@ import { HiX } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 import SvgBgEffect from "./SvgBgEffect";
+import MotionComponent from "./MotionComponent";
 
 import LogoLightMode from "../images/logo-monkey-light-mode.svg";
 import LogoDarkMode from "../images/logo-monkey-dark-mode.svg";
@@ -31,9 +32,17 @@ export default function NavMobileModal({
             <Link to="/" className="-m-1.5 p-1.5">
               <span className="sr-only">MonkeyBranch</span>
               {theme === "dark" ? (
-                <img src={LogoDarkMode} alt="logo Monkey Branch dark mode" />
+                <img
+                  src={LogoDarkMode}
+                  className="w-10 h-10"
+                  alt="logo Monkey Branch dark mode"
+                />
               ) : (
-                <img src={LogoLightMode} alt="Logo Monkey Branch light mode" />
+                <img
+                  src={LogoLightMode}
+                  className="w-10 h-10"
+                  alt="Logo Monkey Branch light mode"
+                />
               )}
             </Link>
           </div>

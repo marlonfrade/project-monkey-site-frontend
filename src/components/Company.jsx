@@ -99,7 +99,7 @@ export default function Company() {
                 Nacionalidade
               </li>
             </ul>
-            <a
+            {/* <a
               href="/"
               aria-label=""
               className="inline-flex items-center font-semibold transition-colors duration-200 text-red-500 hover:ring-1 hover:ring-red-500 rounded-lg p-2 "
@@ -108,7 +108,7 @@ export default function Company() {
               <span className="text-red-500 pl-5 pt-1" aria-hidden="true">
                 &rarr;
               </span>
-            </a>
+            </a> */}
           </div>
           <div>
             <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
@@ -181,7 +181,7 @@ export default function Company() {
                 Inovação
               </li>
             </ul>
-            <a
+            {/* <a
               href="/"
               aria-label=""
               className="inline-flex items-center font-semibold transition-colors duration-200 text-red-500 hover:ring-1 hover:ring-red-500 rounded-lg p-2 "
@@ -190,7 +190,7 @@ export default function Company() {
               <span className="text-red-500 pl-5 pt-1" aria-hidden="true">
                 &rarr;
               </span>
-            </a>
+            </a> */}
           </div>
           <div>
             <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
@@ -259,7 +259,7 @@ export default function Company() {
                 Web3
               </li>
             </ul>
-            <a
+            {/* <a
               href="/"
               aria-label=""
               className="inline-flex items-center font-semibold transition-colors duration-200 text-red-500 hover:ring-1 hover:ring-red-500 rounded-lg p-2 "
@@ -268,7 +268,7 @@ export default function Company() {
               <span className="text-red-500 pl-5 pt-1" aria-hidden="true">
                 &rarr;
               </span>
-            </a>
+            </a> */}
           </div>
           <div>
             <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
@@ -337,7 +337,7 @@ export default function Company() {
                 Descentralização de dados
               </li>
             </ul>
-            <a
+            {/* <a
               href="/"
               aria-label=""
               className="inline-flex items-center font-semibold transition-colors duration-200 text-red-500 hover:ring-1 hover:ring-red-500 rounded-lg p-2 "
@@ -346,7 +346,7 @@ export default function Company() {
               <span className="text-red-500 pl-5 pt-1" aria-hidden="true">
                 &rarr;
               </span>
-            </a>
+            </a> */}
           </div>
         </div>
       </MotionComponent>
