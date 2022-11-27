@@ -4,6 +4,7 @@ import MotionComponent from "./MotionComponent";
 
 import HeroDesktopBg from "../images/hero-desktop-bg.png";
 import HeroMobileBg from "../images/hero-mobile-bg.png";
+import ContactUs from "./ContactUs";
 
 export default function HireUs({ windowWidth }) {
   return (
@@ -46,36 +47,7 @@ export default function HireUs({ windowWidth }) {
                   em contato.
                 </p>
               </div>
-              <form>
-                <div className="flex flex-col md:flex-row">
-                  <input
-                    placeholder="Name"
-                    required=""
-                    type="text"
-                    className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-2 focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
-                  />
-                  <input
-                    placeholder="Email"
-                    required=""
-                    type="text"
-                    className="flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mb-0 focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
-                  />
-                </div>
-                <div className="mt-8 flex gap-x-4 justify-start">
-                  <Link
-                    to="/"
-                    className="inline-block rounded-lg bg-red-600 px-4 py-2 text-base font-semibold text-center  leading-7 text-white shadow-sm hover:bg-red-500"
-                  >
-                    Contratar
-                  </Link>
-                  <Link
-                    to="/projects"
-                    className="inline-block rounded-lg px-4 py-2 text-base font-semibold text-center leading-7 text-gray-900 dark:bg-white hover:bg-gray-100/90 dark:hover:bg-gray-100/90 ring-2 dark:ring-0 ring-gray-900/10 hover:ring-gray-900/20"
-                  >
-                    Ver projetos
-                  </Link>
-                </div>
-              </form>
+              <ContactUs />
             </div>
           </div>
         </div>

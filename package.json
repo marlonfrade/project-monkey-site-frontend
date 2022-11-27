@@ -15,6 +15,7 @@
     "yarn": "^1.22.19"
   },
   "devDependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@headlessui/react": "^1.7.4",
     "@heroicons/react": "^2.0.13",
     "@types/react": "^18.0.24",
