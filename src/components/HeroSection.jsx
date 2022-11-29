@@ -10,9 +10,9 @@ import MotionComponent from "./MotionComponent";
 export default function Hero({ windowWidth, theme, setTheme, navigation }) {
   return (
     <div className="container max-w-screen-xl mx-auto isolate">
+      <SvgBgEffect />
       <MotionComponent>
         <Navbar theme={theme} setTheme={setTheme} navigation={navigation} />
-        <SvgBgEffect />
 
         <div className="relative px-6 py-12 lg:px-8 lg:py-20">
           <div className="mx-auto max-w-3xl">
