@@ -1,10 +1,5 @@
 import { Link } from "react-router-dom";
 
-import ProjectOmalaBg from "../images/project-omala.png";
-import ProjectValidoBg from "../images/project-valido.png";
-import ProjectTakipBg from "../images/project-takip.png";
-import ProjectDatafleetBg from "../images/project-datafleet.png";
-
 import MotionComponent from "./MotionComponent";
 
 export default function Projects() {
@@ -31,21 +26,21 @@ export default function Projects() {
         </div>
         <div className="grid gap-20 row-gap-5 mb-8 lg:gap-6 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
           <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <a href="https://omala.com.br/">
+            <Link to="/">
               <img
-                className="rounded-t-lg w-full h-60"
-                src={ProjectOmalaBg}
-                alt="Projeto Omala"
+                className="rounded-t-lg w-full h-80"
+                src="https://images.unsplash.com/photo-1515658323406-25d61c141a6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=709&q=80"
+                alt="Projeto 1"
               />
 
               <div className="p-5">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  Omala
+                  Lorem Ipsum
                 </h5>
 
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Viaje mais pagando pouco, com Omala. utilize nossa
-                  inteligência e compre passagens aéreas acessíveis.
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Facilis voluptas molestias nostrum mollitia, corrupti
                 </p>
                 <button
                   aria-label="open Validô"
@@ -67,26 +62,25 @@ export default function Projects() {
                   </svg>
                 </button>
               </div>
-            </a>
+            </Link>
           </div>
 
           <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <a href="https://discord.com/invite/r52u8e29u3">
+            <Link to="/">
               <img
-                className="rounded-t-lg w-full h-60"
-                src={ProjectTakipBg}
-                alt="Projeto Takip"
+                className="rounded-t-lg w-full h-80"
+                src="https://images.unsplash.com/flagged/photo-1550489518-40f49ba4bf20?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+                alt="Projeto 2"
               />
 
               <div className="p-5">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  Takip
+                  Lorem Ipsum
                 </h5>
 
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Acompanhe os Despachos e faça Análise de
-                  Viabilidade/Colidência muito mais rápido e fácil. Acesse a
-                  plataforma e ganhe eficiência.
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Facilis voluptas molestias nostrum mollitia, corrupti
                 </p>
                 <button
                   aria-label="open Validô"
@@ -108,25 +102,25 @@ export default function Projects() {
                   </svg>
                 </button>
               </div>
-            </a>
+            </Link>
           </div>
 
           <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <a href="https://valido.dev/">
+            <Link to="/">
               <img
-                className="rounded-t-lg w-full"
-                src={ProjectValidoBg}
-                alt="Projeto Validô"
+                className="rounded-t-lg w-full h-80"
+                src="https://images.unsplash.com/photo-1598190895998-62696125f1c1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+                alt="Projeto 3"
               />
 
               <div className="p-5">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  Validô
+                  Lorem Ipsum
                 </h5>
 
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Validar acesso nunca foi tão fácil e rápido.Acesse a API,
-                  envie uma requisição e tá pronto.
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Facilis voluptas molestias nostrum mollitia, corrupti
                 </p>
                 <button
                   aria-label="open Validô"
@@ -148,25 +142,25 @@ export default function Projects() {
                   </svg>
                 </button>
               </div>
-            </a>
+            </Link>
           </div>
 
           <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <a href="https://datafleet.io/">
+            <Link to="/">
               <img
-                className="rounded-t-lg w-full h-70.  sm:h-60"
-                src={ProjectDatafleetBg}
-                alt="Projeto Datafleet"
+                className="rounded-t-lg w-full h-80"
+                src="https://images.unsplash.com/photo-1585335107823-94c8bc6c9291?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                alt="Projeto 4"
               />
 
               <div className="p-5">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  DataFleet
+                  Lorem Ispum
                 </h5>
 
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Aplicativo desenvolvido para gerir frotas da empresa WPX com
-                  mais controle e confiança.
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Facilis voluptas molestias nostrum mollitia, corrupti
                 </p>
                 <button
                   aria-label="open Datafleet"
@@ -188,7 +182,168 @@ export default function Projects() {
                   </svg>
                 </button>
               </div>
-            </a>
+            </Link>
+          </div>
+        </div>
+        <div className="grid gap-20 row-gap-5 mb-8 lg:gap-6 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
+          <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+            <Link to="/">
+              <img
+                className="rounded-t-lg w-full h-80"
+                src="https://images.unsplash.com/photo-1593489062665-9f26fa627d73?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                alt="Projeto 5"
+              />
+
+              <div className="p-5">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Lorem Ipsum
+                </h5>
+
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Facilis voluptas molestias nostrum mollitia, corrupti
+                </p>
+                <button
+                  aria-label="open Validô"
+                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Acessar
+                  <svg
+                    aria-hidden="true"
+                    className="w-4 h-4 ml-2 -mr-1"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </Link>
+          </div>
+
+          <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+            <Link to="/">
+              <img
+                className="rounded-t-lg w-full h-80"
+                src="https://images.unsplash.com/photo-1610906570945-f1463d3a6558?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                alt="Projeto 6"
+              />
+
+              <div className="p-5">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Lorem Ipsum
+                </h5>
+
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Facilis voluptas molestias nostrum mollitia, corrupti
+                </p>
+                <button
+                  aria-label="open Validô"
+                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Acessar
+                  <svg
+                    aria-hidden="true"
+                    className="w-4 h-4 ml-2 -mr-1"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </Link>
+          </div>
+
+          <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+            <Link to="/">
+              <img
+                className="rounded-t-lg w-full h-80"
+                src="https://images.unsplash.com/photo-1556031330-4536769f448f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80"
+                alt="Projeto 7"
+              />
+
+              <div className="p-5">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Lorem Ipsum
+                </h5>
+
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Facilis voluptas molestias nostrum mollitia, corrupti
+                </p>
+                <button
+                  aria-label="open Validô"
+                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Acessar
+                  <svg
+                    aria-hidden="true"
+                    className="w-4 h-4 ml-2 -mr-1"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </Link>
+          </div>
+
+          <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+            <Link to="/">
+              <img
+                className="rounded-t-lg w-full h-80"
+                src="https://images.unsplash.com/photo-1590280148249-4984a249ac84?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+                alt="Projeto 8"
+              />
+
+              <div className="p-5">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Lorem Ispum
+                </h5>
+
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Facilis voluptas molestias nostrum mollitia, corrupti
+                </p>
+                <button
+                  aria-label="open Datafleet"
+                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Acessar
+                  <svg
+                    aria-hidden="true"
+                    className="w-4 h-4 ml-2 -mr-1"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </Link>
           </div>
         </div>
         <div className="text-center">

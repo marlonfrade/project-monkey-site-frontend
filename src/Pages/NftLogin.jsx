@@ -247,7 +247,6 @@ export default function NftLogin({ theme, setTheme }) {
                     >
                       <svg
                         aria-hidden="true"
-                        svg
                         className="h-5"
                         viewBox="0 0 75.591 75.591"
                       >

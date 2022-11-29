@@ -24,11 +24,9 @@ export default function App() {
   useEffect(() => {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setTheme("dark");
-      localStorage.setItem("user_theme_preference", "dark");
       link.href = FaviconDark;
     } else {
       setTheme("light");
-      localStorage.setItem("user_theme_preference", "light");
       link.href = FaviconLight;
     }
   }, []);
@@ -69,10 +67,12 @@ export default function App() {
   return (
     <AnimatePresence mode="wait">
       {theme ? (
+        //   Content Loaded
         <div className="bg-white dark:bg-black">
           {React.cloneElement(element, { key: location.pathname })}
         </div>
       ) : (
+        // Loading Content Pre-load
         <div className="py-20 container max-w-screen-xl mx-auto isolate">
           <div
             role="status"

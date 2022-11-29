@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Tab } from "@headlessui/react";
+import { Link } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
 import MotionComponent from "../components/MotionComponent";
 import Footer from "../components/Footer";
 import SvgBgEffect from "../components/SvgBgEffect";
-
-import ProjectOmalaBg from "../images/project-omala.png";
+import ProjectsList from "../components/ProjectsList";
 
 const navigation = [{ name: "Home", href: "/" }];
 
@@ -20,38 +20,90 @@ export default function Projects({ theme, setTheme }) {
     Softwares: [
       {
         id: 1,
-        image: "project-omala",
-        link: "https://omala.com.br/",
-        title: "Projeto Omala",
+        name: "Lorem Ipsum",
+        image:
+          "https://images.unsplash.com/photo-1515658323406-25d61c141a6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=709&q=80",
+        link: "",
+        title: "Lorem Ipsum",
         description:
-          "Viaje mais pagando pouco, com Omala. utilize nossa inteligência e compre passagens aéreas acessíveis",
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit Facilis voluptas molestias nostrum mollitia, corrupti",
         launch: "Agosto/2022",
       },
       {
-        id: 1,
-        image: "project-valido",
-        link: "https://valido.dev/",
-        title: "Projeto Validô",
+        id: 2,
+        name: "Lorem Ipsum",
+        image:
+          "https://images.unsplash.com/flagged/photo-1550489518-40f49ba4bf20?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
+        link: "",
+        title: "Lorem Ipsum",
         description:
-          "Validar acesso nunca foi tão fácil e rápido.Acesse a API, envie uma requisição e tá pronto.",
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit Facilis voluptas molestias nostrum mollitia, corrupti",
         launch: "Agosto/2022",
       },
       {
-        id: 1,
-        image: "project-takip",
-        link: "https://discord.com/invite/r52u8e29u3",
-        title: "Projeto Takip",
+        id: 3,
+        name: "Lorem Ipsum",
+        image:
+          "https://images.unsplash.com/photo-1598190895998-62696125f1c1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+        link: "",
+        title: "Lorem Ipsum",
         description:
-          "Acompanhe os Despachos e faça Análise de Viabilidade/Colidência muito mais rápido e fácil. Acesse a plataforma e ganhe eficiência.",
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit Facilis voluptas molestias nostrum mollitia, corrupti",
         launch: "Agosto/2022",
       },
       {
-        id: 1,
-        image: "project-datafleet",
-        link: "https://omala.com.br/",
-        title: "Projeto Datafleet",
+        id: 4,
+        name: "Lorem Ipsum",
+        image:
+          "https://images.unsplash.com/photo-1585335107823-94c8bc6c9291?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        link: "",
+        title: "Lorem Ipsum",
         description:
-          "Software desenvolvido para gerir frotas da empresa WPX com mais controle e confiança",
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit Facilis voluptas molestias nostrum mollitia, corrupti",
+        launch: "Agosto/2022",
+      },
+      {
+        id: 5,
+        name: "Lorem Ipsum",
+        image:
+          "https://images.unsplash.com/photo-1593489062665-9f26fa627d73?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        link: "",
+        title: "Lorem Ipsum",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit Facilis voluptas molestias nostrum mollitia, corrupti",
+        launch: "Agosto/2022",
+      },
+      {
+        id: 6,
+        name: "Lorem Ipsum",
+        image:
+          "https://images.unsplash.com/photo-1610906570945-f1463d3a6558?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        link: "",
+        title: "Lorem Ipsum",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit Facilis voluptas molestias nostrum mollitia, corrupti",
+        launch: "Agosto/2022",
+      },
+      {
+        id: 7,
+        name: "Lorem Ipsum",
+        image:
+          "https://images.unsplash.com/photo-1556031330-4536769f448f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80",
+        link: "",
+        title: "Lorem Ipsum",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit Facilis voluptas molestias nostrum mollitia, corrupti",
+        launch: "Agosto/2022",
+      },
+      {
+        id: 8,
+        name: "Lorem Ipsum",
+        image:
+          "https://images.unsplash.com/photo-1590280148249-4984a249ac84?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+        link: "",
+        title: "Lorem Ipsum",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit Facilis voluptas molestias nostrum mollitia, corrupti",
         launch: "Agosto/2022",
       },
     ],
@@ -59,14 +111,6 @@ export default function Projects({ theme, setTheme }) {
     AppsDisabled: [],
     VRDisabled: [],
   });
-
-  console.log(categories.Softwares.map((el) => el.image));
-
-  // Verify if "disabled" is working
-  console.log(Object.keys(categories));
-  console.log(
-    Object.keys(categories).map((category) => category.includes("Disabled"))
-  );
 
   return (
     <div className="container max-w-screen-xl mx-auto isolate">
@@ -111,32 +155,22 @@ export default function Projects({ theme, setTheme }) {
                       className={classNames("bg-transparent p-3")}
                     >
                       <ul>
-                        <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
+                        <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2 h-full">
                           {projects.map((project) => (
-                            <div key={project.id} className="lg:flex">
-                              <img
-                                className="object-cover w-full h-56 rounded-lg lg:w-64"
-                                src={"/src/images/" + project.image + ".png"}
+                            <Link
+                              to={`/projects/${project.name}`}
+                              state={project}
+                              key={project.id}
+                            >
+                              <ProjectsList
+                                image={project.image}
                                 alt={project.description}
+                                link={project.link}
+                                title={project.title}
+                                description={project.description}
+                                launch={project.launch}
                               />
-
-                              <div className="flex flex-col justify-between py-6 lg:mx-6">
-                                <a
-                                  href={project.link}
-                                  className="text-xl font-semibold text-gray-800 hover:underline dark:text-white "
-                                >
-                                  {project.title}
-                                </a>
-
-                                <p className="text-md text-gray-500 dark:text-gray-300">
-                                  {project.description}
-                                </p>
-
-                                <span className="text-sm text-gray-500 dark:text-gray-300">
-                                  Projeto Lançado em: {project.launch}
-                                </span>
-                              </div>
-                            </div>
+                            </Link>
                           ))}
                         </div>
                       </ul>
