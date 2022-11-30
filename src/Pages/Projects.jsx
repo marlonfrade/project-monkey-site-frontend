@@ -8,7 +8,12 @@ import Footer from "../components/Footer";
 import SvgBgEffect from "../components/SvgBgEffect";
 import ProjectsList from "../components/ProjectsList";
 
-const navigation = [{ name: "Home", href: "/" }];
+const navigation = [
+  { name: "Projetos", href: "#projects" },
+  { name: "Serviços", href: "#services" },
+  { name: "Monkey", href: "#company" },
+  { name: "Web3", href: "#faq" },
+];
 
 const classNames = (...classes) => {
   return classes.filter(Boolean).join(" ");
@@ -158,7 +163,7 @@ export default function Projects({ theme, setTheme }) {
                         <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2 h-full">
                           {projects.map((project) => (
                             <Link
-                              to={`/projects/${project.name}`}
+                              to={`/projects/project/${project.id}`}
                               state={project}
                               key={project.id}
                             >

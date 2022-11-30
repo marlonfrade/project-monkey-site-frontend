@@ -9,7 +9,12 @@ import LogoDarkMode from "../images/logo-monkey-dark-mode.svg";
 import LogoLightMode from "../images/logo-monkey-light-mode.svg";
 import { useState } from "react";
 
-const navigation = [{ name: "Home", href: "/" }];
+const navigation = [
+  { name: "Projetos", href: "#projects" },
+  { name: "Serviços", href: "#services" },
+  { name: "Monkey", href: "#company" },
+  { name: "Web3", href: "#faq" },
+];
 
 export default function NftLogin({ theme, setTheme }) {
   const [isModalLoginOpen, setIsModalLoginOpen] = useState(false);

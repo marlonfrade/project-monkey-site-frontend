@@ -12,7 +12,7 @@ import LogoLightMode from "../images/logo-monkey-light-mode.svg";
 import LogoDarkMode from "../images/logo-monkey-dark-mode.svg";
 import DiscordIconSvg from "../images/discord-round-color-icon.svg";
 
-export default function NavHome({ theme, setTheme, navigation }) {
+export default function Navbar({ theme, setTheme, navigation }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleThemeSwitch = () => {
@@ -22,7 +22,7 @@ export default function NavHome({ theme, setTheme, navigation }) {
 
   return (
     <div>
-      <div className="px-6 pt-12 lg:px-8 py-6">
+      <div className="px-6 py-12 lg:px-8">
         <nav
           className="flex h-9 items-center justify-between"
           aria-label="Navigation"

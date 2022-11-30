@@ -5,6 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import Home from "./Pages/Home";
 import NftLogin from "./Pages/NftLogin";
 import Projects from "./Pages/Projects";
+import Project1 from "./Pages/Project1";
 import NotFound from "./Pages/NotFound";
 
 import FaviconDark from "./images/logo-monkey-dark-mode.svg";
@@ -50,6 +51,10 @@ export default function App() {
     {
       path: "/projects",
       element: <Projects theme={theme} setTheme={setTheme} />,
+    },
+    {
+      path: "/projects/project/1",
+      element: <Project1 theme={theme} setTheme={setTheme} />,
     },
     {
       path: "/nft/login",
